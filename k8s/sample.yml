@@ -1,0 +1,49 @@
+# - Comment ignored by k8s
+
+# Simple Key Value - Correct Form
+key: value
+
+# Incorrect form
+key:value
+key :value
+key value
+
+# More key value
+name: ravi
+city: hyderabad
+time: 11am
+
+# Dictionary / Map - A dictionary is a data structure that holds a collection of data as a set of key-value pairs. 
+trainer:
+  name: john
+  city: hyd
+  time: 10am
+
+# Incorrect form
+student:
+id: 20
+course: aws  
+
+# List / Array - A list is a collection of related values or elements that are stored together
+courses:
+- aws
+- azure
+- devops
+- python
+
+spec:
+  containers:
+  - name: nginx
+    image: nginx:1.14.2
+    ports:
+    - containerPort: 80
+    - containerPort: 8090
+    - containerPort: 8080
+  - name: nginx
+    image: nginx:1.14.2
+    ports:
+    - containerPort: 80
+  - name: nginx
+    image: nginx:1.14.2
+    ports:
+    - containerPort: 80
