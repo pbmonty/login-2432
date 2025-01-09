@@ -8,7 +8,7 @@ spec:
     image: nginx
     ports:
     - containerPort: 80
-  - name: Ubuntu
+  - name: ubuntuos
     image: ubuntu:20.04
     command: ["sleep"]
     args: ["300"]
