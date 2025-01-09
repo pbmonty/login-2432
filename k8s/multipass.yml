@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: multipass
+spec:
+  containers:
+  - name: nginx-a1
+    image: nginx
+    ports:
+    - containerPort: 80
+  - name: Ubuntu
+    image: ubuntu:20.04
+    command: ["sleep"]
+    args: ["300"]
+    
