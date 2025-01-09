@@ -7,7 +7,7 @@ spec:
   selector:
     matchLabels:
       app: nginx
-  template: # Pod Template
+  template: # Pod Templat
     metadata:
       labels:
         app: nginx
