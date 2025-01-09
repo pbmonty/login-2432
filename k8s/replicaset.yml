@@ -5,8 +5,12 @@ metadata:
 spec:
   replicas: 1
   selector:
+    matchLabels:
+      app: nginx
   template: # Pod Template
     metadata:
+    labels:
+        app: nginx
     spec:
       containers:
       - name: nginx-q1
