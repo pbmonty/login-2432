@@ -12,8 +12,8 @@ spec:
       labels:
         app: nginx
       spec:
-      containers:
-      - name: nginx-q1
-        image: nginx
-        ports:
-      - containerPort: 80
+        containers:
+          - name: nginx-q1
+          image: nginx
+          ports:
+          - containerPort: 80
