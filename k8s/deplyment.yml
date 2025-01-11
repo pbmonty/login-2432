@@ -1,6 +1,6 @@
 apiVersion: apps/v1
-kind: ReplicaSet
-metadata: 
+kind: Deployment
+metadata:
   name: nginx
 spec:
   replicas: 1
@@ -16,8 +16,4 @@ spec:
       - name: nginx-container
         image: nginx
         ports:
-<<<<<<< HEAD
         - containerPort: 80
-=======
-        - containerPort: 80
->>>>>>> f68dd7d4cca78d53abedb3fb0e257e5827eb10b7

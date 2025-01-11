@@ -5,7 +5,11 @@ metadata:
 spec:
   type: NodePort
   selector:
+<<<<<<< HEAD
     app.kubernetes.io/name: MyApp
+=======
+    app: MyApp # incorrect label
+>>>>>>> f68dd7d4cca78d53abedb3fb0e257e5827eb10b7
   ports:
     - port: 80
       targetPort: 80
