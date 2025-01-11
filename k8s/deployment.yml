@@ -1,10 +1,8 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  # Unique key of the Deployment instance
   name: dep1
 spec:
-  # 3 Pods should exist at all times.
   replicas: 1
   selector:
     matchLabels:
@@ -12,8 +10,6 @@ spec:
   template:
     metadata:
       labels:
-        # Apply this label to pods and default
-        # the Deployment label selector to this value
         app: nginx
     spec:
       containers:
@@ -22,4 +18,3 @@ spec:
         image: nginx
         ports:
         - containerPort: 80
-
