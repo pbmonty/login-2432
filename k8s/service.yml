@@ -1,16 +1,29 @@
-apiVersion: v1
-kind: Service
+apiVersion: apps/v1
+kind: Deployment
 metadata:
-  name: nginx-service
+  name: lms-be
 spec:
-  type: NodePort
+  replicas: 2
   selector:
-<<<<<<< HEAD
-    app.kubernetes.io/name: MyApp
-=======
-    app: MyApp # incorrect label
->>>>>>> f68dd7d4cca78d53abedb3fb0e257e5827eb10b7
-  ports:
-    - port: 80
-      targetPort: 80
-      nodePort: 30007
+    matchLabels:
+      app: lms-be
+  template:
+    metadata:
+      labels:
+        app: lms-be
+    spec:
+      containers:
+        - name: backend-container
+          image: ravi2krishna/lms-be
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 3000
+          envFrom:
+            - configMapRef:
+                name: backend-config-map
+          env:
+            - name: DB_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: postgres-secret
+                  key: password
