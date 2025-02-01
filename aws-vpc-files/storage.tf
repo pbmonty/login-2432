@@ -3,6 +3,6 @@ resource "aws_ebs_volume" "mystorage" {
   size              = 10
 
   tags = {
-    Name = "HelloWorld"
+    Name = "HelloWorld222"
   }
 }
