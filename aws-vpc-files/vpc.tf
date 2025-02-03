@@ -32,7 +32,7 @@ resource "aws_subnet" "bsubnet" {
 resource "aws_subnet" "dbsubnet" {
   vpc_id     = aws_vpc.vpc.id
   cidr_block = "10.0.3.0/24"
-  map_public_ip_on_launch = true
+  map_public_ip_on_launch = false
 
   tags = {
     Name = "login-dbsubnet"
