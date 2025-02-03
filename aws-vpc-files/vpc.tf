@@ -16,3 +16,14 @@ resource "aws_subnet" "fsubnet" {
     Name = "login-fsubnet"
   }
 }
+
+#Backend Subnet
+resource "aws_subnet" "bsubnet" {
+  vpc_id     = aws_vpc.vpc.id
+  cidr_block = "10.0.2.0/24"
+  map_public_ip_on_launch = true
+
+  tags = {
+    Name = "login-bsubnet"
+  }
+}
