@@ -8,3 +8,9 @@ variable aws_secret_key {
   type        = string
   description = "Input AWS Secret Key"
 }
+
+variable size {
+  type        = string
+  description = "Enter the size : "
+}
+
